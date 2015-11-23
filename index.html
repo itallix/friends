@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="friendsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My Friends</title>
+    <link rel="stylesheet" href="styles/main.css"></link>
+    <link rel="stylesheet" href="js/vendor/bootstrap/dist/css/bootstrap.min.css"></link>
+  </head>
+  <body class="container">
+    <div class='row'>
+        <div class='col-md-12' ng-view></div>
+    </div>
+
+    <script src="js/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/vendor/angular/angular.js"></script>
+    <script src="js/vendor/angular-route/angular-route.min.js"></script>
+    <script src="js/vendor/underscore/underscore-min.js"></script>
+    <script src="js/app/main.js"></script>
+    <script src="js/app/controllers/listController.js"></script>
+    <script src="js/app/controllers/detailsController.js"></script>
+    <script src="js/app/services/friendsService.js"></script>
+  </body>
+</html>

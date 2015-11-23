@@ -1,0 +1,25 @@
+<div class="row">
+  <h3>My Friends</h3>
+<div>
+<div ng-show="friends.length == 0">
+  No friends available
+</div>
+<div class="row friend-item" ng-repeat="item in friends">
+  <span ng-click="select(item.id)">
+    <span class="col-md-2">
+      <img class="photo" ng-src="{{item.photo}}"></img>
+    </span>
+    <span class="col-md-2">
+      {{item.name}}
+    </span>
+    <span class="col-md-2">
+      {{item.status}}
+    </span>
+    <span class="col-md-3">
+      {{item.adress}}
+    </span>
+  </span>
+  <span class="remove col-md-offset-2 col-md-1">
+    <i class="glyphicon glyphicon-trash" ng-click="remove(item.id)"></i>
+  </span>
+</div>
