@@ -28,6 +28,8 @@
 
     ];
 
+    var FRIENDS_API_URL = 'http://private-12625-tinatest.apiary-mock.com/friends';
+
     var service = {
       getFriends: getFriends,
       getFriend: getFriend,
@@ -37,7 +39,7 @@
     return service;
 
     function getFriends() {
-      return $http.get('http://private-12625-tinatest.apiary-mock.com/friends').then(function(data) {
+      return $http.get(FRIENDS_API_URL).then(function(data) {
         return data.data;
       });
       // var deferred = $q.defer();
@@ -46,7 +48,7 @@
     }
 
     function getFriend(id) {
-      return $http.get('http://private-12625-tinatest.apiary-mock.com/friends/' + id).then(function(data) {
+      return $http.get(FRIENDS_API_URL + '/' + id).then(function(data) {
         return data.data;
       });
       // var friend = _(friends).findWhere({id: Number(id)});
@@ -56,7 +58,7 @@
     }
 
     function deleteFriend(id) {
-      return $http.delete('http://private-12625-tinatest.apiary-mock.com/friends/' + id).then(function(data) {
+      return $http.delete(FRIENDS_API_URL + '/' + id).then(function(data) {
         return data.data;
       });
       // friends = _(friends).reject(function(f) { return f.id == id; });
